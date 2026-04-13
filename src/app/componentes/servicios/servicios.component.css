@@ -1,0 +1,31 @@
+.hero-seccion {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff3e0;
+}
+.hero-seccion h2 { font-size: 38px; color: #8B0000; margin-bottom: 10px; }
+.hero-seccion p { font-size: 18px; color: #555; }
+
+.contenedor-principal {
+  padding: 60px 30px;
+  text-align: center;
+  background-color: #fff;
+}
+.titulo-seccion { font-size: 30px; color: #8B0000; margin-bottom: 40px; }
+
+.grid-tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.tarjeta-menu {
+  background-color: #fdf6ec;
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  padding: 25px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.tarjeta-menu h3 { color: #8B0000; margin-bottom: 15px; font-size: 22px; }
+.tarjeta-menu p { color: #555; font-size: 15px; line-height: 1.5; }
