@@ -106,4 +106,4 @@
 }
 @media (max-width: 600px) {
   .grid-tarjetas { grid-template-columns: 1fr; gap: 25px; }
-}
+} 
