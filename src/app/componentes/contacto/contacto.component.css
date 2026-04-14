@@ -1,0 +1,95 @@
+.contacto {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #fff3e0;
+}
+
+.contacto h2 {
+    font-size: 32px;
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.contacto-desc {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFD700;
+    color: #8B0000;
+}
+
+/* INFO SECTION */
+
+.info {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.info h2 {
+    font-size: 32px;
+    color: #8B0000;
+    margin-bottom: 30px;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fdf6ec;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
