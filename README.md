@@ -3,6 +3,7 @@
 ## Integrantes
 - Luiggi Guachun
 - Santiago Bermeo
+- Jorge Cárdenas
 
 ## Descripción
 Proyecto práctico de control de versiones utilizando Git y GitHub.

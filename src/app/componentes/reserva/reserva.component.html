@@ -1,0 +1,72 @@
+<div class="reservation-container">
+    <div class="reservation-card">
+        <div class="reservation-header">
+            <h2>Reserva tu Mesa</h2>
+            <p>Disfruta de una experiencia gastronómica única en <span>Rize Bites</span></p>
+        </div>
+
+        <div *ngIf="successMessage" class="success-alert">
+            {{ successMessage }}
+        </div>
+
+        <form [formGroup]="reservaForm" (ngSubmit)="onSubmit()" class="reservation-form">
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label for="nombreCliente">Nombre Completo</label>
+                    <input type="text" id="nombreCliente" formControlName="nombreCliente" placeholder="Ej: Juan Pérez" [class.error]="submitted && !!reservaForm.get('nombreCliente')?.errors">
+                    <small class="error-text" *ngIf="submitted && reservaForm.get('nombreCliente')?.hasError('required')">El nombre es requerido</small>
+                    <small class="error-text" *ngIf="submitted && reservaForm.get('nombreCliente')?.hasError('minlength')">Mínimo 3 caracteres</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailCliente">Correo Electrónico</label>
+                    <input type="email" id="emailCliente" formControlName="emailCliente" placeholder="juan@ejemplo.com" [class.error]="submitted && !!reservaForm.get('emailCliente')?.errors">
+                    <small class="error-text" *ngIf="submitted && reservaForm.get('emailCliente')?.hasError('email')">Email inválido</small>
+                    <small class="error-text" *ngIf="submitted && reservaForm.get('emailCliente')?.hasError('required')">Email requerido</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefonoCliente">Teléfono</label>
+                    <input type="tel" id="telefonoCliente" formControlName="telefonoCliente" placeholder="987654321" [class.error]="submitted && !!reservaForm.get('telefonoCliente')?.errors">
+                    <small class="error-text" *ngIf="submitted && reservaForm.get('telefonoCliente')?.hasError('pattern')">Formato inválido</small>
+                    <small class="error-text" *ngIf="submitted && reservaForm.get('telefonoCliente')?.hasError('required')">Teléfono requerido</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="cantidadPersonas">Personas</label>
+                    <input type="number" id="cantidadPersonas" formControlName="cantidadPersonas" min="1" max="20" [class.error]="submitted && !!reservaForm.get('cantidadPersonas')?.errors">
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" formControlName="fecha" [min]="minDate" [class.error]="submitted && !!reservaForm.get('fecha')?.errors">
+                    <small class="error-text" *ngIf="submitted && reservaForm.get('fecha')?.hasError('required')">Fecha requerida</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora">Hora</label>
+                    <select id="hora" formControlName="hora" [class.error]="submitted && !!reservaForm.get('hora')?.errors">
+                        <option value="">Selecciona una hora</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">01:00 PM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="19:00">07:00 PM</option>
+                        <option value="20:00">08:00 PM</option>
+                        <option value="21:00">09:00 PM</option>
+                        <option value="22:00">10:00 PM</option>
+                    </select>
+                    <small class="error-text" *ngIf="submitted && reservaForm.get('hora')?.hasError('required')">Hora requerida</small>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="observaciones">Observaciones Especiales</label>
+                    <textarea id="observaciones" formControlName="observaciones" rows="3" placeholder="Alergias, cumpleaños, mesa preferida..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn" [disabled]="reservaForm.invalid && submitted">
+                Confirmar Reserva
+            </button>
+        </form>
+    </div>
+</div>
