@@ -5,7 +5,6 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { ReservaComponent } from './componentes/reserva/reserva.component';
 
 
-
 export const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'servicios', component: ServiciosComponent },
